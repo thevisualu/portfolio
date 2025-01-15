@@ -1,0 +1,191 @@
+:root {
+  --font-family: 'PP Neue Machina', sans-serif;
+  --text-color: #000;
+  --bg-color: #fff;
+}
+
+@font-face {
+  font-family: 'PP Neue Machina';
+  src: url('./fonts/PPNeueMachina-PlainLight.woff2') format('woff2'),
+       url('./fonts/PPNeueMachina-PlainLight.woff') format('woff');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Neue Machina';
+  src: url('./fonts/PPNeueMachina-PlainMedium.woff2') format('woff2'),
+       url('./fonts/PPNeueMachina-PlainMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 130%;
+}
+
+.header .header-roles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  font-size: 18px;
+  position: relative;
+}
+
+.header-center {
+  padding: 20px 30px;
+  font-size: 18px;
+  position: absolute;
+  left: 50%; /* Сдвигаем в центр */
+  transform: translateX(-50%); /* Центрируем относительно середины */
+}
+
+.header-left {
+  text-align: left;
+}
+
+.header-right {
+  text-align: right;
+}
+
+.main {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 680px;
+  padding: 0px 20px
+}
+
+.about p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.about p span {
+  font-weight: 500;
+}
+
+.about .links {
+  margin: 20px 0;
+}
+
+.about .links a {
+  text-decoration: underline;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.photo img {
+  margin-top: 10px;
+  width: 170px;
+  height: auto;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  font-size: 18px;
+  position: absolute; 
+  bottom: 0px; 
+  left: 0;
+  right: 0;
+}
+
+.footer a {
+  text-decoration: underline;
+  color: var(--text-color);
+}
+
+/* Медиа-запросы для мобильной версии */
+@media (max-width: 700px) {
+  body {
+    margin: 20px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column; /* Разместить элементы вертикально */
+    align-items: flex-start; /* Выровнять элементы по левому краю */
+    padding: 0px 20px;
+    margin-bottom: 50px;
+  }
+
+  .header .header-center {
+    position: static; /* Сбрасываем абсолютное позиционирование */
+    transform: none; /* Убираем сдвиг */
+    font-size: 18px; /* Сделать имя крупнее, если нужно */
+    margin-bottom: 10px; /* Отступ ниже имени */
+    padding: 0px;
+  }
+
+  .header .header-roles {
+    display: flex; /* Разместить роли в строку */
+    align-items: center; /* Выровнять по вертикали */
+    padding: 0px;
+  }
+
+  .header .header-roles .header-left {
+    margin-right: 20px; /* Отступ между ролями */
+    padding: 0px;
+  }
+
+  .main {
+    margin: 20px auto;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .about p {
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  .about .links {
+    display: flex; /* Размещаем ссылки в строку */
+    justify-content: flex-start; /* Центрируем ссылки по горизонтали */
+    padding-left: 0px;
+    gap: 20px; /* Добавляем расстояние между ссылками */
+    margin-top: 25px;
+  }
+  
+  .about .links a {
+    text-decoration: underline;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: normal;/
+  }
+
+  .photo img {
+    margin-top: 30px;
+    width: 170px;
+    height: auto;
+  }
+
+  .footer {
+    position: static; /* Убираем фиксированное позиционирование */
+    margin-top: 30px; /* Отступ от фото */
+    display: flex;
+    flex-direction: column; /* Разместить элементы вертикально */
+    align-items: flex-start; /* Выровнять элементы по левому краю */
+    padding: 0px 20px;
+  }
+
+  .footer .footer-left {
+    padding: 10px 0px;
+  }
+
+  .footer .footer-right {
+    padding: 10px 0px;
+  }
+}
