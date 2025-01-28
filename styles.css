@@ -37,13 +37,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 30px;
+  padding: 20px 30px;
   font-size: 18px;
   position: relative;
 }
 
 .header-center {
-  padding: 0px 30px;
+  padding: 20px 30px;
   font-size: 18px;
   position: absolute;
   left: 50%; /* Сдвигаем в центр */
@@ -110,14 +110,14 @@ body {
 /* Медиа-запросы для мобильной версии */
 @media (max-width: 700px) {
   body {
-    margin: 20px;
+    margin: 10px;
   }
 
   .header {
     display: flex;
     flex-direction: column; /* Разместить элементы вертикально */
     align-items: flex-start; /* Выровнять элементы по левому краю */
-    padding: 0px 20px;
+    padding: 0px 10px;
     margin-bottom: 50px;
   }
 
@@ -141,7 +141,7 @@ body {
   }
 
   .main {
-    margin: 20px auto;
+    margin: 10px auto;
     max-width: 100%;
     text-align: left;
   }
